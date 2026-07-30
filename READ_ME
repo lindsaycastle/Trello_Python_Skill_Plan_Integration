@@ -1,0 +1,14 @@
+A set of scripts to handle managing tasks created with an AI claude agent onto a trello board.  This was used as a learning exercise to familarise myself with using Python to call APIs. 
+
+auth_scripts.py(depricated): provides methods to generate an API token for trello authorization
+
+extractBlocks.py:  Handles extracting the "blocks" (individual tasks from the plan) and converts them into a Dict that is passed to update_trello
+
+Update_trello.py:  Handles API calls to get current state of trello board, compare the blocks from the claude agent for duplicates then either adds new cards or updates exsisting cards.
+
+syncDoneTasksFromTrello.py: Can be run to give tasks currently in the done column.  This is used by the claude agent to see if the trello board has updated and the agent can then update the task manager.
+
+
+To Do:
+- clean up comments used for debugging
+- clean up unsuded parts of the code that were made to explore Python and Trello API
